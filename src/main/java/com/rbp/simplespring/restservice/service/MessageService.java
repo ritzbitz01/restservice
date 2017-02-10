@@ -11,7 +11,7 @@ import com.rbp.simplespring.restservice.model.MessageData;
 public class MessageService {
 
 	@Autowired
-	@Qualifier("local")
+	@Qualifier("h2")
 	MessageDatabase database;
 
 	public MessageService() {
