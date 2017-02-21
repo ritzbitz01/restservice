@@ -65,6 +65,115 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>${start-class}</mainClass>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>jdeb</artifactId>
+				<groupId>org.vafer</groupId>
+				<version>1.5</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>jdeb</goal>
+						</goals>
+						<configuration>
+							<verbose>true</verbose>
+							<controlDir>${basedir}/src/deb/control</controlDir>
+							<dataSet>
+								<data>
+									<src>${project.build.directory}/${project.artifactId}-${project.version}.jar</src>
+									<type>file</type>
+									<dst>/home/appuser/${project.artifactId}/${project.artifactId}.jar</dst>
+									<mapper>
+										<type>perm</type>
+										<user>appuser</user>
+										<group>appuser</group>
+									</mapper>
+								</data>
+								<data>
+									<type>template</type>
+									<paths>
+										<path>/var/log/${project.artifactId}</path>
+									</paths>
+									<mapper>
+										<type>perm</type>
+										<user>appuser</user>
+										<group>appuser</group>
+									</mapper>
+								</data>
+								<!-- <data> <src>${project.build.directory}/${project.artifactId}-${project.version}-tests.jar</src> 
+									<type>file</type> <dst>/home/appuser/${project.artifactId}/${project.artifactId}-tests.jar</dst> 
+									<mapper> <type>perm</type> <user>appuser</user> <group>appuser</group> </mapper> 
+									</data> -->
+<!-- 								<data>
+									<src>${basedir}/config</src>
+									<type>directory</type>
+									<mapper>
+										<type>perm</type>
+										<prefix>/home/appuser/${project.artifactId}/config</prefix>
+										<user>appuser</user>
+										<group>appuser</group>
+									</mapper>
+								</data>
+								<data>
+									<src>${basedir}/README.md</src>
+									<type>file</type>
+									<dst>/home/appuser/${project.artifactId}/${project.version}.README.md</dst>
+									<mapper>
+										<type>perm</type>
+										<user>appuser</user>
+										<group>appuser</group>
+									</mapper>
+								</data>
+								<data>
+									<src>${project.basedir}/src/deb/resources/credentials.enc</src>
+									<dst>credentials.enc</dst>
+									<type>file</type>
+									<mapper>
+										<type>perm</type>
+										<prefix>/home/appuser/.aws</prefix>
+										<user>appuser</user>
+										<group>appuser</group>
+									</mapper>
+								</data>
+								<data>
+									<src>${project.basedir}/src/deb/resources/logrotate</src>
+									<type>file</type>
+									<dst>${project.artifactId}</dst>
+									<mapper>
+										<type>perm</type>
+										<prefix>/etc/logrotate.d</prefix>
+										<user>appuser</user>
+										<group>appuser</group>
+									</mapper>
+								</data>
+								<data>
+									<src>${project.basedir}/src/deb/resources/key.enc</src>
+									<dst>key.enc</dst>
+									<type>file</type>
+									<mapper>
+										<type>perm</type>
+										<prefix>/home/appuser/.aws</prefix>
+										<user>appuser</user>
+										<group>appuser</group>
+									</mapper>
+								</data> -->
+								<data>
+									<src>${project.basedir}/src/deb/init/restservice.conf</src>
+									<dst>/etc/init/${project.artifactId}.conf</dst>
+									<type>file</type>
+								</data>
+							</dataSet>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 	

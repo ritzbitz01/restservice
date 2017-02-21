@@ -1,0 +1,4 @@
+#!/bin/sh
+if ( initctl status restservice | grep start ); then
+  initctl stop restservice
+fi
