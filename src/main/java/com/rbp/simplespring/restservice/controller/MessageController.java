@@ -19,7 +19,7 @@ public class MessageController {
 	}
 
 	@RequestMapping("/")
-	public MessageData saveMessageData(@RequestBody MessageData data) {
+	public Long saveMessageData(@RequestBody MessageData data) {
 
 		return messageService.saveMessageData(data);
 	}

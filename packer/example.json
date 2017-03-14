@@ -11,7 +11,7 @@
     "source_ami": "ami-fcc19b99",
     "instance_type": "t2.micro",
     "ssh_username": "ubuntu",
-    "ami_name": "packer-example {{timestamp}}"
+    "ami_name": "gocd-example {{timestamp}}"
   }],
   "provisioners": [{
     "type": "shell",
@@ -20,5 +20,10 @@
       "sudo apt-get update",
       "sudo apt-get install -y default-jre"
     ]
+  },
+  {
+    "type": "file",
+    "source": "../target/restservice_0.0.1~SNAPSHOT_all.deb",
+    "destination": "/tmp/restservice_0.0.1~SNAPSHOT_all.deb"
   }]
 }

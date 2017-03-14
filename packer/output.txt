@@ -1,0 +1,870 @@
+[1;32mamazon-ebs output will be in this color.[0m
+
+[1;32m==> amazon-ebs: Prevalidating AMI Name...[0m
+[0;32m    amazon-ebs: Found Image ID: ami-fcc19b99[0m
+[1;32m==> amazon-ebs: Creating temporary keypair: packer_58af9d84-aa84-a121-3700-6916003e6124[0m
+[1;32m==> amazon-ebs: Creating temporary security group for this instance...[0m
+[1;32m==> amazon-ebs: Authorizing access to port 22 the temporary security group...[0m
+[1;32m==> amazon-ebs: Launching a source AWS instance...[0m
+[0;32m    amazon-ebs: Instance ID: i-0cc41ace5fe8b1f82[0m
+[1;32m==> amazon-ebs: Waiting for instance (i-0cc41ace5fe8b1f82) to become ready...[0m
+[1;32m==> amazon-ebs: Adding tags to source instance[0m
+[1;32m==> amazon-ebs: Waiting for SSH to become available...[0m
+[1;32m==> amazon-ebs: Connected to SSH![0m
+[1;32m==> amazon-ebs: Provisioning with shell script: /var/folders/xp/q9r9j3dn47xbrcsqs8brftv9ptx716/T/packer-shell246654603[0m
+[0;32m    amazon-ebs: Hit:1 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial InRelease[0m
+[0;32m    amazon-ebs: Get:2 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial-updates InRelease [102 kB][0m
+[0;32m    amazon-ebs: Get:3 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial-backports InRelease [102 kB][0m
+[0;32m    amazon-ebs: Get:4 http://security.ubuntu.com/ubuntu xenial-security InRelease [102 kB][0m
+[0;32m    amazon-ebs: Get:5 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main Sources [868 kB][0m
+[0;32m    amazon-ebs: Get:6 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/restricted Sources [4,808 B][0m
+[0;32m    amazon-ebs: Get:7 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/universe Sources [7,728 kB][0m
+[0;32m    amazon-ebs: Get:8 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/multiverse Sources [179 kB][0m
+[0;32m    amazon-ebs: Get:9 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main Sources [233 kB][0m
+[0;32m    amazon-ebs: Get:10 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/restricted Sources [2,688 B][0m
+[0;32m    amazon-ebs: Get:11 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/universe Sources [132 kB][0m
+[0;32m    amazon-ebs: Get:12 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/multiverse Sources [4,556 B][0m
+[0;32m    amazon-ebs: Get:13 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 Packages [482 kB][0m
+[0;32m    amazon-ebs: Get:14 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main Translation-en [192 kB][0m
+[0;32m    amazon-ebs: Get:15 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/restricted amd64 Packages [7,176 B][0m
+[0;32m    amazon-ebs: Get:16 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/restricted Translation-en [2,396 B][0m
+[0;32m    amazon-ebs: Get:17 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/universe amd64 Packages [409 kB][0m
+[0;32m    amazon-ebs: Get:18 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/universe Translation-en [154 kB][0m
+[0;32m    amazon-ebs: Get:19 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/multiverse amd64 Packages [8,080 B][0m
+[0;32m    amazon-ebs: Get:20 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/multiverse Translation-en [3,580 B][0m
+[0;32m    amazon-ebs: Get:21 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial-backports/main Sources [3,200 B][0m
+[0;32m    amazon-ebs: Get:22 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial-backports/universe Sources [1,868 B][0m
+[0;32m    amazon-ebs: Get:23 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial-backports/main amd64 Packages [4,672 B][0m
+[0;32m    amazon-ebs: Get:24 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial-backports/main Translation-en [3,200 B][0m
+[0;32m    amazon-ebs: Get:25 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial-backports/universe amd64 Packages [2,512 B][0m
+[0;32m    amazon-ebs: Get:26 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial-backports/universe Translation-en [1,216 B][0m
+[0;32m    amazon-ebs: Get:27 http://security.ubuntu.com/ubuntu xenial-security/main Sources [60.7 kB][0m
+[0;32m    amazon-ebs: Get:28 http://security.ubuntu.com/ubuntu xenial-security/restricted Sources [2,288 B][0m
+[0;32m    amazon-ebs: Get:29 http://security.ubuntu.com/ubuntu xenial-security/universe Sources [20.6 kB][0m
+[0;32m    amazon-ebs: Get:30 http://security.ubuntu.com/ubuntu xenial-security/multiverse Sources [1,148 B][0m
+[0;32m    amazon-ebs: Get:31 http://security.ubuntu.com/ubuntu xenial-security/main amd64 Packages [219 kB][0m
+[0;32m    amazon-ebs: Get:32 http://security.ubuntu.com/ubuntu xenial-security/main Translation-en [91.8 kB][0m
+[0;32m    amazon-ebs: Get:33 http://security.ubuntu.com/ubuntu xenial-security/restricted amd64 Packages [6,828 B][0m
+[0;32m    amazon-ebs: Get:34 http://security.ubuntu.com/ubuntu xenial-security/restricted Translation-en [2,272 B][0m
+[0;32m    amazon-ebs: Get:35 http://security.ubuntu.com/ubuntu xenial-security/universe amd64 Packages [78.6 kB][0m
+[0;32m    amazon-ebs: Get:36 http://security.ubuntu.com/ubuntu xenial-security/universe Translation-en [43.3 kB][0m
+[0;32m    amazon-ebs: Get:37 http://security.ubuntu.com/ubuntu xenial-security/multiverse amd64 Packages [2,748 B][0m
+[0;32m    amazon-ebs: Get:38 http://security.ubuntu.com/ubuntu xenial-security/multiverse Translation-en [1,232 B][0m
+[0;32m    amazon-ebs: Fetched 11.3 MB in 2s (5,148 kB/s)[0m
+[0;32m    amazon-ebs: Reading package lists...[0m
+[0;32m    amazon-ebs: Reading package lists...[0m
+[0;32m    amazon-ebs: Building dependency tree...[0m
+[0;32m    amazon-ebs: Reading state information...[0m
+[0;32m    amazon-ebs: The following additional packages will be installed:[0m
+[0;32m    amazon-ebs: ca-certificates-java dbus dbus-x11 default-jre-headless fontconfig[0m
+[0;32m    amazon-ebs: fontconfig-config fonts-dejavu-core fonts-dejavu-extra gconf-service[0m
+[0;32m    amazon-ebs: gconf-service-backend gconf2 gconf2-common hicolor-icon-theme java-common[0m
+[0;32m    amazon-ebs: libasound2 libasound2-data libasyncns0 libatk1.0-0 libatk1.0-data[0m
+[0;32m    amazon-ebs: libavahi-client3 libavahi-common-data libavahi-common3 libavahi-glib1[0m
+[0;32m    amazon-ebs: libbonobo2-0 libbonobo2-common libcairo2 libcanberra0 libcups2 libdatrie1[0m
+[0;32m    amazon-ebs: libdbus-1-3 libdrm-amdgpu1 libdrm-intel1 libdrm-nouveau2 libdrm-radeon1[0m
+[0;32m    amazon-ebs: libflac8 libfontconfig1 libgconf-2-4 libgdk-pixbuf2.0-0[0m
+[0;32m    amazon-ebs: libgdk-pixbuf2.0-common libgif7 libgl1-mesa-dri libgl1-mesa-glx[0m
+[0;32m    amazon-ebs: libglapi-mesa libgnome-2-0 libgnome2-common libgnomevfs2-0[0m
+[0;32m    amazon-ebs: libgnomevfs2-common libgraphite2-3 libgtk2.0-0 libgtk2.0-bin[0m
+[0;32m    amazon-ebs: libgtk2.0-common libharfbuzz0b libjbig0 libjpeg-turbo8 libjpeg8 liblcms2-2[0m
+[0;32m    amazon-ebs: libllvm3.8 libltdl7 libnspr4 libnss3 libnss3-nssdb libogg0 liborbit-2-0[0m
+[0;32m    amazon-ebs: libpango-1.0-0 libpangocairo-1.0-0 libpangoft2-1.0-0 libpciaccess0[0m
+[0;32m    amazon-ebs: libpcsclite1 libpixman-1-0 libpulse0 libsndfile1 libtdb1 libthai-data[0m
+[0;32m    amazon-ebs: libthai0 libtiff5 libtxc-dxtn-s2tc0 libvorbis0a libvorbisenc2 libvorbisfile3[0m
+[0;32m    amazon-ebs: libx11-xcb1 libxcb-dri2-0 libxcb-dri3-0 libxcb-glx0 libxcb-present0[0m
+[0;32m    amazon-ebs: libxcb-render0 libxcb-shm0 libxcb-sync1 libxcomposite1 libxcursor1[0m
+[0;32m    amazon-ebs: libxdamage1 libxfixes3 libxi6 libxinerama1 libxrandr2 libxrender1[0m
+[0;32m    amazon-ebs: libxshmfence1 libxtst6 libxxf86vm1 openjdk-8-jre openjdk-8-jre-headless[0m
+[0;32m    amazon-ebs: sound-theme-freedesktop x11-common[0m
+[0;32m    amazon-ebs: Suggested packages:[0m
+[0;32m    amazon-ebs: default-java-plugin gconf-defaults-service libasound2-plugins alsa-utils[0m
+[0;32m    amazon-ebs: libbonobo2-bin libcanberra-gtk0 libcanberra-pulse cups-common desktop-base[0m
+[0;32m    amazon-ebs: libgnomevfs2-bin libgnomevfs2-extra gamin | fam gnome-mime-data[0m
+[0;32m    amazon-ebs: librsvg2-common gvfs liblcms2-utils pcscd pulseaudio icedtea-8-plugin[0m
+[0;32m    amazon-ebs: openjdk-8-jre-jamvm libnss-mdns fonts-ipafont-gothic fonts-ipafont-mincho[0m
+[0;32m    amazon-ebs: ttf-wqy-microhei | ttf-wqy-zenhei fonts-indic[0m
+[0;32m    amazon-ebs: The following NEW packages will be installed:[0m
+[0;32m    amazon-ebs: ca-certificates-java dbus-x11 default-jre default-jre-headless fontconfig[0m
+[0;32m    amazon-ebs: fontconfig-config fonts-dejavu-core fonts-dejavu-extra gconf-service[0m
+[0;32m    amazon-ebs: gconf-service-backend gconf2 gconf2-common hicolor-icon-theme java-common[0m
+[0;32m    amazon-ebs: libasound2 libasound2-data libasyncns0 libatk1.0-0 libatk1.0-data[0m
+[0;32m    amazon-ebs: libavahi-client3 libavahi-common-data libavahi-common3 libavahi-glib1[0m
+[0;32m    amazon-ebs: libbonobo2-0 libbonobo2-common libcairo2 libcanberra0 libcups2 libdatrie1[0m
+[0;32m    amazon-ebs: libdrm-amdgpu1 libdrm-intel1 libdrm-nouveau2 libdrm-radeon1 libflac8[0m
+[0;32m    amazon-ebs: libfontconfig1 libgconf-2-4 libgdk-pixbuf2.0-0 libgdk-pixbuf2.0-common[0m
+[0;32m    amazon-ebs: libgif7 libgl1-mesa-dri libgl1-mesa-glx libglapi-mesa libgnome-2-0[0m
+[0;32m    amazon-ebs: libgnome2-common libgnomevfs2-0 libgnomevfs2-common libgraphite2-3[0m
+[0;32m    amazon-ebs: libgtk2.0-0 libgtk2.0-bin libgtk2.0-common libharfbuzz0b libjbig0[0m
+[0;32m    amazon-ebs: libjpeg-turbo8 libjpeg8 liblcms2-2 libllvm3.8 libltdl7 libnspr4 libnss3[0m
+[0;32m    amazon-ebs: libnss3-nssdb libogg0 liborbit-2-0 libpango-1.0-0 libpangocairo-1.0-0[0m
+[0;32m    amazon-ebs: libpangoft2-1.0-0 libpciaccess0 libpcsclite1 libpixman-1-0 libpulse0[0m
+[0;32m    amazon-ebs: libsndfile1 libtdb1 libthai-data libthai0 libtiff5 libtxc-dxtn-s2tc0[0m
+[0;32m    amazon-ebs: libvorbis0a libvorbisenc2 libvorbisfile3 libx11-xcb1 libxcb-dri2-0[0m
+[0;32m    amazon-ebs: libxcb-dri3-0 libxcb-glx0 libxcb-present0 libxcb-render0 libxcb-shm0[0m
+[0;32m    amazon-ebs: libxcb-sync1 libxcomposite1 libxcursor1 libxdamage1 libxfixes3 libxi6[0m
+[0;32m    amazon-ebs: libxinerama1 libxrandr2 libxrender1 libxshmfence1 libxtst6 libxxf86vm1[0m
+[0;32m    amazon-ebs: openjdk-8-jre openjdk-8-jre-headless sound-theme-freedesktop x11-common[0m
+[0;32m    amazon-ebs: The following packages will be upgraded:[0m
+[0;32m    amazon-ebs: dbus libdbus-1-3[0m
+[0;32m    amazon-ebs: 2 upgraded, 101 newly installed, 0 to remove and 87 not upgraded.[0m
+[0;32m    amazon-ebs: Need to get 53.8 MB of archives.[0m
+[0;32m    amazon-ebs: After this operation, 301 MB of additional disk space will be used.[0m
+[0;32m    amazon-ebs: Get:1 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 fonts-dejavu-core all 2.35-1 [1,039 kB][0m
+[0;32m    amazon-ebs: Get:2 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 fontconfig-config all 2.11.94-0ubuntu1.1 [49.9 kB][0m
+[0;32m    amazon-ebs: Get:3 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libfontconfig1 amd64 2.11.94-0ubuntu1.1 [131 kB][0m
+[0;32m    amazon-ebs: Get:4 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 fontconfig amd64 2.11.94-0ubuntu1.1 [178 kB][0m
+[0;32m    amazon-ebs: Get:5 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libasyncns0 amd64 0.8-5build1 [12.3 kB][0m
+[0;32m    amazon-ebs: Get:6 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libbonobo2-common all 2.32.1-3 [34.7 kB][0m
+[0;32m    amazon-ebs: Get:7 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 liborbit-2-0 amd64 1:2.14.19-1build1 [140 kB][0m
+[0;32m    amazon-ebs: Get:8 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libbonobo2-0 amd64 2.32.1-3 [211 kB][0m
+[0;32m    amazon-ebs: Get:9 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libjpeg-turbo8 amd64 1.4.2-0ubuntu3 [111 kB][0m
+[0;32m    amazon-ebs: Get:10 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 liblcms2-2 amd64 2.6-3ubuntu2 [137 kB][0m
+[0;32m    amazon-ebs: Get:11 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libogg0 amd64 1.3.2-1 [17.2 kB][0m
+[0;32m    amazon-ebs: Get:12 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libxcomposite1 amd64 1:0.4.4-1 [7,714 B][0m
+[0;32m    amazon-ebs: Get:13 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libxfixes3 amd64 1:5.0.1-2 [11.1 kB][0m
+[0;32m    amazon-ebs: Get:14 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libxrender1 amd64 1:0.9.9-0ubuntu1 [18.5 kB][0m
+[0;32m    amazon-ebs: Get:15 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libxcursor1 amd64 1:1.1.14-1 [22.8 kB][0m
+[0;32m    amazon-ebs: Get:16 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libxdamage1 amd64 1:1.1.4-2 [6,946 B][0m
+[0;32m    amazon-ebs: Get:17 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libxinerama1 amd64 2:1.1.3-1 [7,908 B][0m
+[0;32m    amazon-ebs: Get:18 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libxshmfence1 amd64 1.2-1 [5,042 B][0m
+[0;32m    amazon-ebs: Get:19 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 x11-common all 1:7.7+13ubuntu3 [22.4 kB][0m
+[0;32m    amazon-ebs: Get:20 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libxtst6 amd64 2:1.2.2-1 [14.1 kB][0m
+[0;32m    amazon-ebs: Get:21 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libxxf86vm1 amd64 1:1.1.4-1 [10.6 kB][0m
+[0;32m    amazon-ebs: Get:22 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 java-common all 0.56ubuntu2 [7,742 B][0m
+[0;32m    amazon-ebs: Get:23 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 default-jre-headless amd64 2:1.8-56ubuntu2 [4,380 B][0m
+[0;32m    amazon-ebs: Get:24 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libnspr4 amd64 2:4.12-0ubuntu0.16.04.1 [112 kB][0m
+[0;32m    amazon-ebs: Get:25 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libnss3-nssdb all 2:3.26.2-0ubuntu0.16.04.2 [10.6 kB][0m
+[0;32m    amazon-ebs: Get:26 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libnss3 amd64 2:3.26.2-0ubuntu0.16.04.2 [1,153 kB][0m
+[0;32m    amazon-ebs: Get:27 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 ca-certificates-java all 20160321 [12.9 kB][0m
+[0;32m    amazon-ebs: Get:28 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libavahi-common-data amd64 0.6.32~rc+dfsg-1ubuntu2 [21.7 kB][0m
+[0;32m    amazon-ebs: Get:29 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libavahi-common3 amd64 0.6.32~rc+dfsg-1ubuntu2 [21.6 kB][0m
+[0;32m    amazon-ebs: Get:30 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libdbus-1-3 amd64 1.10.6-1ubuntu3.3 [161 kB][0m
+[0;32m    amazon-ebs: Get:31 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 dbus amd64 1.10.6-1ubuntu3.3 [142 kB][0m
+[0;32m    amazon-ebs: Get:32 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libavahi-client3 amd64 0.6.32~rc+dfsg-1ubuntu2 [25.1 kB][0m
+[0;32m    amazon-ebs: Get:33 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libcups2 amd64 2.1.3-4 [197 kB][0m
+[0;32m    amazon-ebs: Get:34 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libjpeg8 amd64 8c-2ubuntu8 [2,194 B][0m
+[0;32m    amazon-ebs: Get:35 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpcsclite1 amd64 1.8.14-1ubuntu1.16.04.1 [21.4 kB][0m
+[0;32m    amazon-ebs: Get:36 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libxi6 amd64 2:1.7.6-1 [28.6 kB][0m
+[0;32m    amazon-ebs: Get:37 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 openjdk-8-jre-headless amd64 8u121-b13-0ubuntu1.16.04.2 [26.9 MB][0m
+[0;32m    amazon-ebs: Get:38 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libjbig0 amd64 2.1-3.1 [26.6 kB][0m
+[0;32m    amazon-ebs: Get:39 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libtxc-dxtn-s2tc0 amd64 0~git20131104-1.1 [51.8 kB][0m
+[0;32m    amazon-ebs: Get:40 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 dbus-x11 amd64 1.10.6-1ubuntu3.3 [21.4 kB][0m
+[0;32m    amazon-ebs: Get:41 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libgtk2.0-common all 2.24.30-1ubuntu1 [123 kB][0m
+[0;32m    amazon-ebs: Get:42 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libatk1.0-data all 2.18.0-1 [17.1 kB][0m
+[0;32m    amazon-ebs: Get:43 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libatk1.0-0 amd64 2.18.0-1 [56.9 kB][0m
+[0;32m    amazon-ebs: Get:44 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libpixman-1-0 amd64 0.33.6-1 [231 kB][0m
+[0;32m    amazon-ebs: Get:45 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libxcb-render0 amd64 1.11.1-1ubuntu1 [11.4 kB][0m
+[0;32m    amazon-ebs: Get:46 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libxcb-shm0 amd64 1.11.1-1ubuntu1 [5,588 B][0m
+[0;32m    amazon-ebs: Get:47 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libcairo2 amd64 1.14.6-1 [555 kB][0m
+[0;32m    amazon-ebs: Get:48 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libtiff5 amd64 4.0.6-1 [144 kB][0m
+[0;32m    amazon-ebs: Get:49 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libgdk-pixbuf2.0-common all 2.32.2-1ubuntu1.2 [10.2 kB][0m
+[0;32m    amazon-ebs: Get:50 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libgdk-pixbuf2.0-0 amd64 2.32.2-1ubuntu1.2 [158 kB][0m
+[0;32m    amazon-ebs: Get:51 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libthai-data all 0.1.24-2 [131 kB][0m
+[0;32m    amazon-ebs: Get:52 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libdatrie1 amd64 0.2.10-2 [17.3 kB][0m
+[0;32m    amazon-ebs: Get:53 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libthai0 amd64 0.1.24-2 [17.3 kB][0m
+[0;32m    amazon-ebs: Get:54 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libpango-1.0-0 amd64 1.38.1-1 [148 kB][0m
+[0;32m    amazon-ebs: Get:55 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libgraphite2-3 amd64 1.3.6-1ubuntu1 [70.8 kB][0m
+[0;32m    amazon-ebs: Get:56 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libharfbuzz0b amd64 1.0.1-1ubuntu0.1 [140 kB][0m
+[0;32m    amazon-ebs: Get:57 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libpangoft2-1.0-0 amd64 1.38.1-1 [33.3 kB][0m
+[0;32m    amazon-ebs: Get:58 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libpangocairo-1.0-0 amd64 1.38.1-1 [20.5 kB][0m
+[0;32m    amazon-ebs: Get:59 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libxrandr2 amd64 2:1.5.0-1 [17.6 kB][0m
+[0;32m    amazon-ebs: Get:60 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libgtk2.0-0 amd64 2.24.30-1ubuntu1 [1,777 kB][0m
+[0;32m    amazon-ebs: Get:61 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libglapi-mesa amd64 12.0.6-0ubuntu0.16.04.1 [22.9 kB][0m
+[0;32m    amazon-ebs: Get:62 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libx11-xcb1 amd64 2:1.6.3-1ubuntu2 [8,956 B][0m
+[0;32m    amazon-ebs: Get:63 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libxcb-dri2-0 amd64 1.11.1-1ubuntu1 [6,882 B][0m
+[0;32m    amazon-ebs: Get:64 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libxcb-dri3-0 amd64 1.11.1-1ubuntu1 [5,218 B][0m
+[0;32m    amazon-ebs: Get:65 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libxcb-glx0 amd64 1.11.1-1ubuntu1 [20.9 kB][0m
+[0;32m    amazon-ebs: Get:66 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libxcb-present0 amd64 1.11.1-1ubuntu1 [5,218 B][0m
+[0;32m    amazon-ebs: Get:67 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libxcb-sync1 amd64 1.11.1-1ubuntu1 [8,324 B][0m
+[0;32m    amazon-ebs: Get:68 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libdrm-amdgpu1 amd64 2.4.70-1~ubuntu16.04.1 [16.5 kB][0m
+[0;32m    amazon-ebs: Get:69 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libpciaccess0 amd64 0.13.4-1 [18.1 kB][0m
+[0;32m    amazon-ebs: Get:70 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libdrm-intel1 amd64 2.4.70-1~ubuntu16.04.1 [56.0 kB][0m
+[0;32m    amazon-ebs: Get:71 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libdrm-nouveau2 amd64 2.4.70-1~ubuntu16.04.1 [16.3 kB][0m
+[0;32m    amazon-ebs: Get:72 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libdrm-radeon1 amd64 2.4.70-1~ubuntu16.04.1 [21.6 kB][0m
+[0;32m    amazon-ebs: Get:73 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libllvm3.8 amd64 1:3.8-2ubuntu4 [10.3 MB][0m
+[0;32m    amazon-ebs: Get:74 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libgl1-mesa-dri amd64 12.0.6-0ubuntu0.16.04.1 [4,344 kB][0m
+[0;32m    amazon-ebs: Get:75 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libgl1-mesa-glx amd64 12.0.6-0ubuntu0.16.04.1 [130 kB][0m
+[0;32m    amazon-ebs: Get:76 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libasound2-data all 1.1.0-0ubuntu1 [29.4 kB][0m
+[0;32m    amazon-ebs: Get:77 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libasound2 amd64 1.1.0-0ubuntu1 [350 kB][0m
+[0;32m    amazon-ebs: Get:78 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libgif7 amd64 5.1.4-0.3~16.04 [30.5 kB][0m
+[0;32m    amazon-ebs: Get:79 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libflac8 amd64 1.3.1-4 [210 kB][0m
+[0;32m    amazon-ebs: Get:80 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libvorbis0a amd64 1.3.5-3 [86.8 kB][0m
+[0;32m    amazon-ebs: Get:81 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libvorbisenc2 amd64 1.3.5-3 [70.7 kB][0m
+[0;32m    amazon-ebs: Get:82 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libsndfile1 amd64 1.0.25-10 [137 kB][0m
+[0;32m    amazon-ebs: Get:83 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpulse0 amd64 1:8.0-0ubuntu3.2 [248 kB][0m
+[0;32m    amazon-ebs: Get:84 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 openjdk-8-jre amd64 8u121-b13-0ubuntu1.16.04.2 [69.3 kB][0m
+[0;32m    amazon-ebs: Get:85 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 default-jre amd64 2:1.8-56ubuntu2 [980 B][0m
+[0;32m    amazon-ebs: Get:86 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 fonts-dejavu-extra all 2.35-1 [1,749 kB][0m
+[0;32m    amazon-ebs: Get:87 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 gconf2-common all 3.2.6-3ubuntu6 [21.0 kB][0m
+[0;32m    amazon-ebs: Get:88 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libgconf-2-4 amd64 3.2.6-3ubuntu6 [84.6 kB][0m
+[0;32m    amazon-ebs: Get:89 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 gconf-service-backend amd64 3.2.6-3ubuntu6 [57.5 kB][0m
+[0;32m    amazon-ebs: Get:90 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 gconf-service amd64 3.2.6-3ubuntu6 [2,046 B][0m
+[0;32m    amazon-ebs: Get:91 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 gconf2 amd64 3.2.6-3ubuntu6 [65.8 kB][0m
+[0;32m    amazon-ebs: Get:92 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 hicolor-icon-theme all 0.15-0ubuntu1 [7,750 B][0m
+[0;32m    amazon-ebs: Get:93 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libavahi-glib1 amd64 0.6.32~rc+dfsg-1ubuntu2 [7,726 B][0m
+[0;32m    amazon-ebs: Get:94 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libltdl7 amd64 2.4.6-0.1 [38.3 kB][0m
+[0;32m    amazon-ebs: Get:95 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libtdb1 amd64 1.3.8-2 [38.2 kB][0m
+[0;32m    amazon-ebs: Get:96 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libvorbisfile3 amd64 1.3.5-3 [15.9 kB][0m
+[0;32m    amazon-ebs: Get:97 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 sound-theme-freedesktop all 0.8-1 [385 kB][0m
+[0;32m    amazon-ebs: Get:98 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libcanberra0 amd64 0.30-2.1ubuntu1 [37.4 kB][0m
+[0;32m    amazon-ebs: Get:99 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libgnomevfs2-common amd64 1:2.24.4-6.1ubuntu1 [23.0 kB][0m
+[0;32m    amazon-ebs: Get:100 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libgnomevfs2-0 amd64 1:2.24.4-6.1ubuntu1 [213 kB][0m
+[0;32m    amazon-ebs: Get:101 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libgnome2-common all 2.32.1-5ubuntu1 [33.5 kB][0m
+[0;32m    amazon-ebs: Get:102 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libgnome-2-0 amd64 2.32.1-5ubuntu1 [53.7 kB][0m
+[0;32m    amazon-ebs: Get:103 http://us-east-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libgtk2.0-bin amd64 2.24.30-1ubuntu1 [9,820 B][0m
+[0;32m    amazon-ebs: debconf: unable to initialize frontend: Dialog[0m
+[0;32m    amazon-ebs: debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)[0m
+[0;32m    amazon-ebs: debconf: falling back to frontend: Readline[0m
+[0;32m    amazon-ebs: debconf: unable to initialize frontend: Readline[0m
+[0;32m    amazon-ebs: debconf: (This frontend requires a controlling tty.)[0m
+[0;32m    amazon-ebs: debconf: falling back to frontend: Teletype[0m
+[0;32m    amazon-ebs: dpkg-preconfigure: unable to re-open stdin:[0m
+[0;32m    amazon-ebs: Fetched 53.8 MB in 2s (19.4 MB/s)[0m
+[0;32m    amazon-ebs: Selecting previously unselected package fonts-dejavu-core.[0m
+[0;32m    amazon-ebs: (Reading database ... 53794 files and directories currently installed.)[0m
+[0;32m    amazon-ebs: Preparing to unpack .../fonts-dejavu-core_2.35-1_all.deb ...[0m
+[0;32m    amazon-ebs: Unpacking fonts-dejavu-core (2.35-1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package fontconfig-config.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../fontconfig-config_2.11.94-0ubuntu1.1_all.deb ...[0m
+[0;32m    amazon-ebs: Unpacking fontconfig-config (2.11.94-0ubuntu1.1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libfontconfig1:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libfontconfig1_2.11.94-0ubuntu1.1_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libfontconfig1:amd64 (2.11.94-0ubuntu1.1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package fontconfig.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../fontconfig_2.11.94-0ubuntu1.1_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking fontconfig (2.11.94-0ubuntu1.1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libasyncns0:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libasyncns0_0.8-5build1_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libasyncns0:amd64 (0.8-5build1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libbonobo2-common.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libbonobo2-common_2.32.1-3_all.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libbonobo2-common (2.32.1-3) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package liborbit-2-0:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../liborbit-2-0_1%3a2.14.19-1build1_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking liborbit-2-0:amd64 (1:2.14.19-1build1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libbonobo2-0:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libbonobo2-0_2.32.1-3_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libbonobo2-0:amd64 (2.32.1-3) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libjpeg-turbo8:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libjpeg-turbo8_1.4.2-0ubuntu3_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libjpeg-turbo8:amd64 (1.4.2-0ubuntu3) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package liblcms2-2:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../liblcms2-2_2.6-3ubuntu2_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking liblcms2-2:amd64 (2.6-3ubuntu2) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libogg0:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libogg0_1.3.2-1_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libogg0:amd64 (1.3.2-1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libxcomposite1:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libxcomposite1_1%3a0.4.4-1_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libxcomposite1:amd64 (1:0.4.4-1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libxfixes3:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libxfixes3_1%3a5.0.1-2_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libxfixes3:amd64 (1:5.0.1-2) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libxrender1:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libxrender1_1%3a0.9.9-0ubuntu1_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libxrender1:amd64 (1:0.9.9-0ubuntu1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libxcursor1:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libxcursor1_1%3a1.1.14-1_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libxcursor1:amd64 (1:1.1.14-1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libxdamage1:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libxdamage1_1%3a1.1.4-2_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libxdamage1:amd64 (1:1.1.4-2) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libxinerama1:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libxinerama1_2%3a1.1.3-1_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libxinerama1:amd64 (2:1.1.3-1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libxshmfence1:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libxshmfence1_1.2-1_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libxshmfence1:amd64 (1.2-1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package x11-common.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../x11-common_1%3a7.7+13ubuntu3_all.deb ...[0m
+[0;32m    amazon-ebs: Unpacking x11-common (1:7.7+13ubuntu3) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libxtst6:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libxtst6_2%3a1.2.2-1_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libxtst6:amd64 (2:1.2.2-1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libxxf86vm1:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libxxf86vm1_1%3a1.1.4-1_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libxxf86vm1:amd64 (1:1.1.4-1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package java-common.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../java-common_0.56ubuntu2_all.deb ...[0m
+[0;32m    amazon-ebs: Unpacking java-common (0.56ubuntu2) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package default-jre-headless.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../default-jre-headless_2%3a1.8-56ubuntu2_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking default-jre-headless (2:1.8-56ubuntu2) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libnspr4:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libnspr4_2%3a4.12-0ubuntu0.16.04.1_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libnspr4:amd64 (2:4.12-0ubuntu0.16.04.1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libnss3-nssdb.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libnss3-nssdb_2%3a3.26.2-0ubuntu0.16.04.2_all.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libnss3-nssdb (2:3.26.2-0ubuntu0.16.04.2) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libnss3:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libnss3_2%3a3.26.2-0ubuntu0.16.04.2_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libnss3:amd64 (2:3.26.2-0ubuntu0.16.04.2) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package ca-certificates-java.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../ca-certificates-java_20160321_all.deb ...[0m
+[0;32m    amazon-ebs: Unpacking ca-certificates-java (20160321) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libavahi-common-data:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libavahi-common-data_0.6.32~rc+dfsg-1ubuntu2_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libavahi-common-data:amd64 (0.6.32~rc+dfsg-1ubuntu2) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libavahi-common3:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libavahi-common3_0.6.32~rc+dfsg-1ubuntu2_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libavahi-common3:amd64 (0.6.32~rc+dfsg-1ubuntu2) ...[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libdbus-1-3_1.10.6-1ubuntu3.3_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libdbus-1-3:amd64 (1.10.6-1ubuntu3.3) over (1.10.6-1ubuntu3.1) ...[0m
+[0;32m    amazon-ebs: Preparing to unpack .../dbus_1.10.6-1ubuntu3.3_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking dbus (1.10.6-1ubuntu3.3) over (1.10.6-1ubuntu3.1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libavahi-client3:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libavahi-client3_0.6.32~rc+dfsg-1ubuntu2_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libavahi-client3:amd64 (0.6.32~rc+dfsg-1ubuntu2) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libcups2:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libcups2_2.1.3-4_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libcups2:amd64 (2.1.3-4) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libjpeg8:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libjpeg8_8c-2ubuntu8_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libjpeg8:amd64 (8c-2ubuntu8) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libpcsclite1:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libpcsclite1_1.8.14-1ubuntu1.16.04.1_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libpcsclite1:amd64 (1.8.14-1ubuntu1.16.04.1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libxi6:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libxi6_2%3a1.7.6-1_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libxi6:amd64 (2:1.7.6-1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package openjdk-8-jre-headless:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../openjdk-8-jre-headless_8u121-b13-0ubuntu1.16.04.2_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking openjdk-8-jre-headless:amd64 (8u121-b13-0ubuntu1.16.04.2) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libjbig0:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libjbig0_2.1-3.1_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libjbig0:amd64 (2.1-3.1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libtxc-dxtn-s2tc0:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libtxc-dxtn-s2tc0_0~git20131104-1.1_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libtxc-dxtn-s2tc0:amd64 (0~git20131104-1.1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package dbus-x11.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../dbus-x11_1.10.6-1ubuntu3.3_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking dbus-x11 (1.10.6-1ubuntu3.3) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libgtk2.0-common.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libgtk2.0-common_2.24.30-1ubuntu1_all.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libgtk2.0-common (2.24.30-1ubuntu1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libatk1.0-data.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libatk1.0-data_2.18.0-1_all.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libatk1.0-data (2.18.0-1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libatk1.0-0:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libatk1.0-0_2.18.0-1_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libatk1.0-0:amd64 (2.18.0-1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libpixman-1-0:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libpixman-1-0_0.33.6-1_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libpixman-1-0:amd64 (0.33.6-1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libxcb-render0:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libxcb-render0_1.11.1-1ubuntu1_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libxcb-render0:amd64 (1.11.1-1ubuntu1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libxcb-shm0:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libxcb-shm0_1.11.1-1ubuntu1_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libxcb-shm0:amd64 (1.11.1-1ubuntu1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libcairo2:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libcairo2_1.14.6-1_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libcairo2:amd64 (1.14.6-1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libtiff5:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libtiff5_4.0.6-1_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libtiff5:amd64 (4.0.6-1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libgdk-pixbuf2.0-common.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libgdk-pixbuf2.0-common_2.32.2-1ubuntu1.2_all.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libgdk-pixbuf2.0-common (2.32.2-1ubuntu1.2) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libgdk-pixbuf2.0-0:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libgdk-pixbuf2.0-0_2.32.2-1ubuntu1.2_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libgdk-pixbuf2.0-0:amd64 (2.32.2-1ubuntu1.2) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libthai-data.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libthai-data_0.1.24-2_all.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libthai-data (0.1.24-2) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libdatrie1:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libdatrie1_0.2.10-2_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libdatrie1:amd64 (0.2.10-2) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libthai0:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libthai0_0.1.24-2_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libthai0:amd64 (0.1.24-2) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libpango-1.0-0:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libpango-1.0-0_1.38.1-1_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libpango-1.0-0:amd64 (1.38.1-1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libgraphite2-3:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libgraphite2-3_1.3.6-1ubuntu1_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libgraphite2-3:amd64 (1.3.6-1ubuntu1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libharfbuzz0b:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libharfbuzz0b_1.0.1-1ubuntu0.1_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libharfbuzz0b:amd64 (1.0.1-1ubuntu0.1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libpangoft2-1.0-0:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libpangoft2-1.0-0_1.38.1-1_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libpangoft2-1.0-0:amd64 (1.38.1-1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libpangocairo-1.0-0:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libpangocairo-1.0-0_1.38.1-1_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libpangocairo-1.0-0:amd64 (1.38.1-1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libxrandr2:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libxrandr2_2%3a1.5.0-1_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libxrandr2:amd64 (2:1.5.0-1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libgtk2.0-0:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libgtk2.0-0_2.24.30-1ubuntu1_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libgtk2.0-0:amd64 (2.24.30-1ubuntu1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libglapi-mesa:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libglapi-mesa_12.0.6-0ubuntu0.16.04.1_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libglapi-mesa:amd64 (12.0.6-0ubuntu0.16.04.1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libx11-xcb1:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libx11-xcb1_2%3a1.6.3-1ubuntu2_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libx11-xcb1:amd64 (2:1.6.3-1ubuntu2) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libxcb-dri2-0:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libxcb-dri2-0_1.11.1-1ubuntu1_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libxcb-dri2-0:amd64 (1.11.1-1ubuntu1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libxcb-dri3-0:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libxcb-dri3-0_1.11.1-1ubuntu1_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libxcb-dri3-0:amd64 (1.11.1-1ubuntu1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libxcb-glx0:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libxcb-glx0_1.11.1-1ubuntu1_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libxcb-glx0:amd64 (1.11.1-1ubuntu1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libxcb-present0:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libxcb-present0_1.11.1-1ubuntu1_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libxcb-present0:amd64 (1.11.1-1ubuntu1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libxcb-sync1:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libxcb-sync1_1.11.1-1ubuntu1_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libxcb-sync1:amd64 (1.11.1-1ubuntu1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libdrm-amdgpu1:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libdrm-amdgpu1_2.4.70-1~ubuntu16.04.1_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libdrm-amdgpu1:amd64 (2.4.70-1~ubuntu16.04.1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libpciaccess0:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libpciaccess0_0.13.4-1_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libpciaccess0:amd64 (0.13.4-1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libdrm-intel1:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libdrm-intel1_2.4.70-1~ubuntu16.04.1_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libdrm-intel1:amd64 (2.4.70-1~ubuntu16.04.1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libdrm-nouveau2:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libdrm-nouveau2_2.4.70-1~ubuntu16.04.1_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libdrm-nouveau2:amd64 (2.4.70-1~ubuntu16.04.1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libdrm-radeon1:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libdrm-radeon1_2.4.70-1~ubuntu16.04.1_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libdrm-radeon1:amd64 (2.4.70-1~ubuntu16.04.1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libllvm3.8:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libllvm3.8_1%3a3.8-2ubuntu4_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libllvm3.8:amd64 (1:3.8-2ubuntu4) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libgl1-mesa-dri:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libgl1-mesa-dri_12.0.6-0ubuntu0.16.04.1_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libgl1-mesa-dri:amd64 (12.0.6-0ubuntu0.16.04.1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libgl1-mesa-glx:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libgl1-mesa-glx_12.0.6-0ubuntu0.16.04.1_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libgl1-mesa-glx:amd64 (12.0.6-0ubuntu0.16.04.1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libasound2-data.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libasound2-data_1.1.0-0ubuntu1_all.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libasound2-data (1.1.0-0ubuntu1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libasound2:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libasound2_1.1.0-0ubuntu1_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libasound2:amd64 (1.1.0-0ubuntu1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libgif7:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libgif7_5.1.4-0.3~16.04_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libgif7:amd64 (5.1.4-0.3~16.04) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libflac8:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libflac8_1.3.1-4_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libflac8:amd64 (1.3.1-4) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libvorbis0a:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libvorbis0a_1.3.5-3_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libvorbis0a:amd64 (1.3.5-3) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libvorbisenc2:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libvorbisenc2_1.3.5-3_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libvorbisenc2:amd64 (1.3.5-3) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libsndfile1:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libsndfile1_1.0.25-10_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libsndfile1:amd64 (1.0.25-10) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libpulse0:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libpulse0_1%3a8.0-0ubuntu3.2_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libpulse0:amd64 (1:8.0-0ubuntu3.2) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package openjdk-8-jre:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../openjdk-8-jre_8u121-b13-0ubuntu1.16.04.2_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking openjdk-8-jre:amd64 (8u121-b13-0ubuntu1.16.04.2) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package default-jre.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../default-jre_2%3a1.8-56ubuntu2_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking default-jre (2:1.8-56ubuntu2) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package fonts-dejavu-extra.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../fonts-dejavu-extra_2.35-1_all.deb ...[0m
+[0;32m    amazon-ebs: Unpacking fonts-dejavu-extra (2.35-1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package gconf2-common.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../gconf2-common_3.2.6-3ubuntu6_all.deb ...[0m
+[0;32m    amazon-ebs: Unpacking gconf2-common (3.2.6-3ubuntu6) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libgconf-2-4:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libgconf-2-4_3.2.6-3ubuntu6_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libgconf-2-4:amd64 (3.2.6-3ubuntu6) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package gconf-service-backend.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../gconf-service-backend_3.2.6-3ubuntu6_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking gconf-service-backend (3.2.6-3ubuntu6) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package gconf-service.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../gconf-service_3.2.6-3ubuntu6_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking gconf-service (3.2.6-3ubuntu6) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package gconf2.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../gconf2_3.2.6-3ubuntu6_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking gconf2 (3.2.6-3ubuntu6) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package hicolor-icon-theme.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../hicolor-icon-theme_0.15-0ubuntu1_all.deb ...[0m
+[0;32m    amazon-ebs: Unpacking hicolor-icon-theme (0.15-0ubuntu1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libavahi-glib1:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libavahi-glib1_0.6.32~rc+dfsg-1ubuntu2_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libavahi-glib1:amd64 (0.6.32~rc+dfsg-1ubuntu2) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libltdl7:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libltdl7_2.4.6-0.1_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libltdl7:amd64 (2.4.6-0.1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libtdb1:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libtdb1_1.3.8-2_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libtdb1:amd64 (1.3.8-2) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libvorbisfile3:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libvorbisfile3_1.3.5-3_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libvorbisfile3:amd64 (1.3.5-3) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package sound-theme-freedesktop.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../sound-theme-freedesktop_0.8-1_all.deb ...[0m
+[0;32m    amazon-ebs: Unpacking sound-theme-freedesktop (0.8-1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libcanberra0:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libcanberra0_0.30-2.1ubuntu1_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libcanberra0:amd64 (0.30-2.1ubuntu1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libgnomevfs2-common.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libgnomevfs2-common_1%3a2.24.4-6.1ubuntu1_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libgnomevfs2-common (1:2.24.4-6.1ubuntu1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libgnomevfs2-0:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libgnomevfs2-0_1%3a2.24.4-6.1ubuntu1_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libgnomevfs2-0:amd64 (1:2.24.4-6.1ubuntu1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libgnome2-common.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libgnome2-common_2.32.1-5ubuntu1_all.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libgnome2-common (2.32.1-5ubuntu1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libgnome-2-0:amd64.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libgnome-2-0_2.32.1-5ubuntu1_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libgnome-2-0:amd64 (2.32.1-5ubuntu1) ...[0m
+[0;32m    amazon-ebs: Selecting previously unselected package libgtk2.0-bin.[0m
+[0;32m    amazon-ebs: Preparing to unpack .../libgtk2.0-bin_2.24.30-1ubuntu1_amd64.deb ...[0m
+[0;32m    amazon-ebs: Unpacking libgtk2.0-bin (2.24.30-1ubuntu1) ...[0m
+[0;32m    amazon-ebs: Processing triggers for man-db (2.7.5-1) ...[0m
+[0;32m    amazon-ebs: Processing triggers for libc-bin (2.23-0ubuntu5) ...[0m
+[0;32m    amazon-ebs: Processing triggers for systemd (229-4ubuntu13) ...[0m
+[0;32m    amazon-ebs: Processing triggers for ureadahead (0.100.0-19) ...[0m
+[0;32m    amazon-ebs: Processing triggers for ca-certificates (20160104ubuntu1) ...[0m
+[0;32m    amazon-ebs: Updating certificates in /etc/ssl/certs...[0m
+[0;32m    amazon-ebs: 0 added, 0 removed; done.[0m
+[0;32m    amazon-ebs: Running hooks in /etc/ca-certificates/update.d...[0m
+[0;32m    amazon-ebs: done.[0m
+[0;32m    amazon-ebs: Processing triggers for mime-support (3.59ubuntu1) ...[0m
+[0;32m    amazon-ebs: Setting up fonts-dejavu-core (2.35-1) ...[0m
+[0;32m    amazon-ebs: Setting up fontconfig-config (2.11.94-0ubuntu1.1) ...[0m
+[0;32m    amazon-ebs: Setting up libfontconfig1:amd64 (2.11.94-0ubuntu1.1) ...[0m
+[0;32m    amazon-ebs: Setting up fontconfig (2.11.94-0ubuntu1.1) ...[0m
+[0;32m    amazon-ebs: Regenerating fonts cache... done.[0m
+[0;32m    amazon-ebs: Setting up libasyncns0:amd64 (0.8-5build1) ...[0m
+[0;32m    amazon-ebs: Setting up libbonobo2-common (2.32.1-3) ...[0m
+[0;32m    amazon-ebs: Setting up liborbit-2-0:amd64 (1:2.14.19-1build1) ...[0m
+[0;32m    amazon-ebs: Setting up libbonobo2-0:amd64 (2.32.1-3) ...[0m
+[0;32m    amazon-ebs: Setting up libjpeg-turbo8:amd64 (1.4.2-0ubuntu3) ...[0m
+[0;32m    amazon-ebs: Setting up liblcms2-2:amd64 (2.6-3ubuntu2) ...[0m
+[0;32m    amazon-ebs: Setting up libogg0:amd64 (1.3.2-1) ...[0m
+[0;32m    amazon-ebs: Setting up libxcomposite1:amd64 (1:0.4.4-1) ...[0m
+[0;32m    amazon-ebs: Setting up libxfixes3:amd64 (1:5.0.1-2) ...[0m
+[0;32m    amazon-ebs: Setting up libxrender1:amd64 (1:0.9.9-0ubuntu1) ...[0m
+[0;32m    amazon-ebs: Setting up libxcursor1:amd64 (1:1.1.14-1) ...[0m
+[0;32m    amazon-ebs: Setting up libxdamage1:amd64 (1:1.1.4-2) ...[0m
+[0;32m    amazon-ebs: Setting up libxinerama1:amd64 (2:1.1.3-1) ...[0m
+[0;32m    amazon-ebs: Setting up libxshmfence1:amd64 (1.2-1) ...[0m
+[0;32m    amazon-ebs: Setting up x11-common (1:7.7+13ubuntu3) ...[0m
+[0;32m    amazon-ebs: debconf: unable to initialize frontend: Dialog[0m
+[0;32m    amazon-ebs: debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)[0m
+[0;32m    amazon-ebs: debconf: falling back to frontend: Readline[0m
+[0;32m    amazon-ebs: update-rc.d: warning: start and stop actions are no longer supported; falling back to defaults[0m
+[0;32m    amazon-ebs: Setting up libxtst6:amd64 (2:1.2.2-1) ...[0m
+[0;32m    amazon-ebs: Setting up libxxf86vm1:amd64 (1:1.1.4-1) ...[0m
+[0;32m    amazon-ebs: Setting up java-common (0.56ubuntu2) ...[0m
+[0;32m    amazon-ebs: Setting up libnspr4:amd64 (2:4.12-0ubuntu0.16.04.1) ...[0m
+[0;32m    amazon-ebs: Setting up libavahi-common-data:amd64 (0.6.32~rc+dfsg-1ubuntu2) ...[0m
+[0;32m    amazon-ebs: Setting up libavahi-common3:amd64 (0.6.32~rc+dfsg-1ubuntu2) ...[0m
+[0;32m    amazon-ebs: Setting up libdbus-1-3:amd64 (1.10.6-1ubuntu3.3) ...[0m
+[0;32m    amazon-ebs: Setting up libavahi-client3:amd64 (0.6.32~rc+dfsg-1ubuntu2) ...[0m
+[0;32m    amazon-ebs: Setting up libcups2:amd64 (2.1.3-4) ...[0m
+[0;32m    amazon-ebs: Setting up libjpeg8:amd64 (8c-2ubuntu8) ...[0m
+[0;32m    amazon-ebs: Setting up libpcsclite1:amd64 (1.8.14-1ubuntu1.16.04.1) ...[0m
+[0;32m    amazon-ebs: Setting up libxi6:amd64 (2:1.7.6-1) ...[0m
+[0;32m    amazon-ebs: Setting up dbus (1.10.6-1ubuntu3.3) ...[0m
+[0;32m    amazon-ebs: A reboot is required to replace the running dbus-daemon.[0m
+[0;32m    amazon-ebs: Please reboot the system when convenient.[0m
+[0;32m    amazon-ebs: Setting up libjbig0:amd64 (2.1-3.1) ...[0m
+[0;32m    amazon-ebs: Setting up libtxc-dxtn-s2tc0:amd64 (0~git20131104-1.1) ...[0m
+[0;32m    amazon-ebs: update-alternatives: using /usr/lib/x86_64-linux-gnu/libtxc_dxtn_s2tc.so.0 to provide /usr/lib/x86_64-linux-gnu/libtxc_dxtn.so (libtxc-dxtn-x86_64-linux-gnu) in auto mode[0m
+[0;32m    amazon-ebs: Setting up dbus-x11 (1.10.6-1ubuntu3.3) ...[0m
+[0;32m    amazon-ebs: Setting up libgtk2.0-common (2.24.30-1ubuntu1) ...[0m
+[0;32m    amazon-ebs: Setting up libatk1.0-data (2.18.0-1) ...[0m
+[0;32m    amazon-ebs: Setting up libatk1.0-0:amd64 (2.18.0-1) ...[0m
+[0;32m    amazon-ebs: Setting up libpixman-1-0:amd64 (0.33.6-1) ...[0m
+[0;32m    amazon-ebs: Setting up libxcb-render0:amd64 (1.11.1-1ubuntu1) ...[0m
+[0;32m    amazon-ebs: Setting up libxcb-shm0:amd64 (1.11.1-1ubuntu1) ...[0m
+[0;32m    amazon-ebs: Setting up libcairo2:amd64 (1.14.6-1) ...[0m
+[0;32m    amazon-ebs: Setting up libtiff5:amd64 (4.0.6-1) ...[0m
+[0;32m    amazon-ebs: Setting up libgdk-pixbuf2.0-common (2.32.2-1ubuntu1.2) ...[0m
+[0;32m    amazon-ebs: Setting up libgdk-pixbuf2.0-0:amd64 (2.32.2-1ubuntu1.2) ...[0m
+[0;32m    amazon-ebs: Setting up libthai-data (0.1.24-2) ...[0m
+[0;32m    amazon-ebs: Setting up libdatrie1:amd64 (0.2.10-2) ...[0m
+[0;32m    amazon-ebs: Setting up libthai0:amd64 (0.1.24-2) ...[0m
+[0;32m    amazon-ebs: Setting up libpango-1.0-0:amd64 (1.38.1-1) ...[0m
+[0;32m    amazon-ebs: Setting up libgraphite2-3:amd64 (1.3.6-1ubuntu1) ...[0m
+[0;32m    amazon-ebs: Setting up libharfbuzz0b:amd64 (1.0.1-1ubuntu0.1) ...[0m
+[0;32m    amazon-ebs: Setting up libpangoft2-1.0-0:amd64 (1.38.1-1) ...[0m
+[0;32m    amazon-ebs: Setting up libpangocairo-1.0-0:amd64 (1.38.1-1) ...[0m
+[0;32m    amazon-ebs: Setting up libxrandr2:amd64 (2:1.5.0-1) ...[0m
+[0;32m    amazon-ebs: Setting up libgtk2.0-0:amd64 (2.24.30-1ubuntu1) ...[0m
+[0;32m    amazon-ebs: Setting up libglapi-mesa:amd64 (12.0.6-0ubuntu0.16.04.1) ...[0m
+[0;32m    amazon-ebs: Setting up libx11-xcb1:amd64 (2:1.6.3-1ubuntu2) ...[0m
+[0;32m    amazon-ebs: Setting up libxcb-dri2-0:amd64 (1.11.1-1ubuntu1) ...[0m
+[0;32m    amazon-ebs: Setting up libxcb-dri3-0:amd64 (1.11.1-1ubuntu1) ...[0m
+[0;32m    amazon-ebs: Setting up libxcb-glx0:amd64 (1.11.1-1ubuntu1) ...[0m
+[0;32m    amazon-ebs: Setting up libxcb-present0:amd64 (1.11.1-1ubuntu1) ...[0m
+[0;32m    amazon-ebs: Setting up libxcb-sync1:amd64 (1.11.1-1ubuntu1) ...[0m
+[0;32m    amazon-ebs: Setting up libdrm-amdgpu1:amd64 (2.4.70-1~ubuntu16.04.1) ...[0m
+[0;32m    amazon-ebs: Setting up libpciaccess0:amd64 (0.13.4-1) ...[0m
+[0;32m    amazon-ebs: Setting up libdrm-intel1:amd64 (2.4.70-1~ubuntu16.04.1) ...[0m
+[0;32m    amazon-ebs: Setting up libdrm-nouveau2:amd64 (2.4.70-1~ubuntu16.04.1) ...[0m
+[0;32m    amazon-ebs: Setting up libdrm-radeon1:amd64 (2.4.70-1~ubuntu16.04.1) ...[0m
+[0;32m    amazon-ebs: Setting up libllvm3.8:amd64 (1:3.8-2ubuntu4) ...[0m
+[0;32m    amazon-ebs: Setting up libgl1-mesa-dri:amd64 (12.0.6-0ubuntu0.16.04.1) ...[0m
+[0;32m    amazon-ebs: Setting up libgl1-mesa-glx:amd64 (12.0.6-0ubuntu0.16.04.1) ...[0m
+[0;32m    amazon-ebs: update-alternatives: using /usr/lib/x86_64-linux-gnu/mesa/ld.so.conf to provide /etc/ld.so.conf.d/x86_64-linux-gnu_GL.conf (x86_64-linux-gnu_gl_conf) in auto mode[0m
+[0;32m    amazon-ebs: Setting up libasound2-data (1.1.0-0ubuntu1) ...[0m
+[0;32m    amazon-ebs: Setting up libasound2:amd64 (1.1.0-0ubuntu1) ...[0m
+[0;32m    amazon-ebs: Setting up libgif7:amd64 (5.1.4-0.3~16.04) ...[0m
+[0;32m    amazon-ebs: Setting up libflac8:amd64 (1.3.1-4) ...[0m
+[0;32m    amazon-ebs: Setting up libvorbis0a:amd64 (1.3.5-3) ...[0m
+[0;32m    amazon-ebs: Setting up libvorbisenc2:amd64 (1.3.5-3) ...[0m
+[0;32m    amazon-ebs: Setting up libsndfile1:amd64 (1.0.25-10) ...[0m
+[0;32m    amazon-ebs: Setting up libpulse0:amd64 (1:8.0-0ubuntu3.2) ...[0m
+[0;32m    amazon-ebs: Setting up fonts-dejavu-extra (2.35-1) ...[0m
+[0;32m    amazon-ebs: Setting up gconf2-common (3.2.6-3ubuntu6) ...[0m
+[0;32m    amazon-ebs: debconf: unable to initialize frontend: Dialog[0m
+[0;32m    amazon-ebs: debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)[0m
+[0;32m    amazon-ebs: debconf: falling back to frontend: Readline[0m
+[0;32m    amazon-ebs:[0m
+[0;32m    amazon-ebs: Creating config file /etc/gconf/2/path with new version[0m
+[0;32m    amazon-ebs: Setting up libgconf-2-4:amd64 (3.2.6-3ubuntu6) ...[0m
+[0;32m    amazon-ebs: Setting up hicolor-icon-theme (0.15-0ubuntu1) ...[0m
+[0;32m    amazon-ebs: Setting up libavahi-glib1:amd64 (0.6.32~rc+dfsg-1ubuntu2) ...[0m
+[0;32m    amazon-ebs: Setting up libltdl7:amd64 (2.4.6-0.1) ...[0m
+[0;32m    amazon-ebs: Setting up libtdb1:amd64 (1.3.8-2) ...[0m
+[0;32m    amazon-ebs: Setting up libvorbisfile3:amd64 (1.3.5-3) ...[0m
+[0;32m    amazon-ebs: Setting up sound-theme-freedesktop (0.8-1) ...[0m
+[0;32m    amazon-ebs: Setting up libcanberra0:amd64 (0.30-2.1ubuntu1) ...[0m
+[0;32m    amazon-ebs: Setting up libgtk2.0-bin (2.24.30-1ubuntu1) ...[0m
+[0;32m    amazon-ebs: Setting up libnss3-nssdb (2:3.26.2-0ubuntu0.16.04.2) ...[0m
+[0;32m    amazon-ebs: Setting up gconf-service (3.2.6-3ubuntu6) ...[0m
+[0;32m    amazon-ebs: Setting up libnss3:amd64 (2:3.26.2-0ubuntu0.16.04.2) ...[0m
+[0;32m    amazon-ebs: Setting up openjdk-8-jre-headless:amd64 (8u121-b13-0ubuntu1.16.04.2) ...[0m
+[0;32m    amazon-ebs: update-alternatives: using /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/rmid to provide /usr/bin/rmid (rmid) in auto mode[0m
+[0;32m    amazon-ebs: update-alternatives: using /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java to provide /usr/bin/java (java) in auto mode[0m
+[0;32m    amazon-ebs: update-alternatives: using /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/keytool to provide /usr/bin/keytool (keytool) in auto mode[0m
+[0;32m    amazon-ebs: update-alternatives: using /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/jjs to provide /usr/bin/jjs (jjs) in auto mode[0m
+[0;32m    amazon-ebs: update-alternatives: using /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/pack200 to provide /usr/bin/pack200 (pack200) in auto mode[0m
+[0;32m    amazon-ebs: update-alternatives: using /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/rmiregistry to provide /usr/bin/rmiregistry (rmiregistry) in auto mode[0m
+[0;32m    amazon-ebs: update-alternatives: using /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/unpack200 to provide /usr/bin/unpack200 (unpack200) in auto mode[0m
+[0;32m    amazon-ebs: update-alternatives: using /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/orbd to provide /usr/bin/orbd (orbd) in auto mode[0m
+[0;32m    amazon-ebs: update-alternatives: using /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/servertool to provide /usr/bin/servertool (servertool) in auto mode[0m
+[0;32m    amazon-ebs: update-alternatives: using /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/tnameserv to provide /usr/bin/tnameserv (tnameserv) in auto mode[0m
+[0;32m    amazon-ebs: update-alternatives: using /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jexec to provide /usr/bin/jexec (jexec) in auto mode[0m
+[0;32m    amazon-ebs: Setting up ca-certificates-java (20160321) ...[0m
+[0;32m    amazon-ebs: Adding debian:Verisign_Class_3_Public_Primary_Certification_Authority.pem[0m
+[0;32m    amazon-ebs: Adding debian:Certification_Authority_of_WoSign_G2.pem[0m
+[0;32m    amazon-ebs: Adding debian:GeoTrust_Universal_CA.pem[0m
+[0;32m    amazon-ebs: Adding debian:GeoTrust_Primary_Certification_Authority.pem[0m
+[0;32m    amazon-ebs: Adding debian:Verisign_Class_3_Public_Primary_Certification_Authority_-_G3.pem[0m
+[0;32m    amazon-ebs: Adding debian:CA_WoSign_ECC_Root.pem[0m
+[0;32m    amazon-ebs: Adding debian:Verisign_Class_1_Public_Primary_Certification_Authority.pem[0m
+[0;32m    amazon-ebs: Adding debian:NetLock_Business_=Class_B=_Root.pem[0m
+[0;32m    amazon-ebs: Adding debian:RSA_Security_2048_v3.pem[0m
+[0;32m    amazon-ebs: Adding debian:SecureTrust_CA.pem[0m
+[0;32m    amazon-ebs: Adding debian:StartCom_Certification_Authority.pem[0m
+[0;32m    amazon-ebs: Adding debian:Verisign_Class_1_Public_Primary_Certification_Authority_-_G2.pem[0m
+[0;32m    amazon-ebs: Adding debian:Atos_TrustedRoot_2011.pem[0m
+[0;32m    amazon-ebs: Adding debian:Verisign_Class_2_Public_Primary_Certification_Authority_-_G2.pem[0m
+[0;32m    amazon-ebs: Adding debian:GlobalSign_ECC_Root_CA_-_R5.pem[0m
+[0;32m    amazon-ebs: Adding debian:WellsSecure_Public_Root_Certificate_Authority.pem[0m
+[0;32m    amazon-ebs: Adding debian:Trustis_FPS_Root_CA.pem[0m
+[0;32m    amazon-ebs: Adding debian:Staat_der_Nederlanden_Root_CA.pem[0m
+[0;32m    amazon-ebs: Adding debian:UTN_USERFirst_Email_Root_CA.pem[0m
+[0;32m    amazon-ebs: Adding debian:DigiCert_Assured_ID_Root_G3.pem[0m
+[0;32m    amazon-ebs: Adding debian:QuoVadis_Root_CA_3_G3.pem[0m
+[0;32m    amazon-ebs: Adding debian:Equifax_Secure_eBusiness_CA_1.pem[0m
+[0;32m    amazon-ebs: Adding debian:TÜRKTRUST_Elektronik_Sertifika_Hizmet_Sağlayıcısı_H5.pem[0m
+[0;32m    amazon-ebs: Adding debian:E-Tugra_Certification_Authority.pem[0m
+[0;32m    amazon-ebs: Adding debian:AddTrust_Low-Value_Services_Root.pem[0m
+[0;32m    amazon-ebs: Adding debian:Comodo_Trusted_Services_root.pem[0m
+[0;32m    amazon-ebs: Adding debian:Chambers_of_Commerce_Root_-_2008.pem[0m
+[0;32m    amazon-ebs: Adding debian:DigiCert_Assured_ID_Root_G2.pem[0m
+[0;32m    amazon-ebs: Adding debian:AddTrust_Public_Services_Root.pem[0m
+[0;32m    amazon-ebs: Adding debian:Starfield_Class_2_CA.pem[0m
+[0;32m    amazon-ebs: Adding debian:SecureSign_RootCA11.pem[0m
+[0;32m    amazon-ebs: Adding debian:COMODO_ECC_Certification_Authority.pem[0m
+[0;32m    amazon-ebs: Adding debian:T-TeleSec_GlobalRoot_Class_2.pem[0m
+[0;32m    amazon-ebs: Adding debian:ePKI_Root_Certification_Authority.pem[0m
+[0;32m    amazon-ebs: Adding debian:CNNIC_ROOT.pem[0m
+[0;32m    amazon-ebs: Adding debian:Verisign_Class_3_Public_Primary_Certification_Authority_2.pem[0m
+[0;32m    amazon-ebs: Adding debian:ACEDICOM_Root.pem[0m
+[0;32m    amazon-ebs: Adding debian:CA_Disig_Root_R2.pem[0m
+[0;32m    amazon-ebs: Adding debian:EBG_Elektronik_Sertifika_Hizmet_Sağlayıcısı.pem[0m
+[0;32m    amazon-ebs: Adding debian:TWCA_Root_Certification_Authority.pem[0m
+[0;32m    amazon-ebs: Adding debian:Sonera_Class_2_Root_CA.pem[0m
+[0;32m    amazon-ebs: Adding debian:Juur-SK.pem[0m
+[0;32m    amazon-ebs: Adding debian:VeriSign_Class_3_Public_Primary_Certification_Authority_-_G5.pem[0m
+[0;32m    amazon-ebs: Adding debian:SwissSign_Silver_CA_-_G2.pem[0m
+[0;32m    amazon-ebs: Adding debian:QuoVadis_Root_CA_2.pem[0m
+[0;32m    amazon-ebs: Adding debian:Go_Daddy_Root_Certificate_Authority_-_G2.pem[0m
+[0;32m    amazon-ebs: Adding debian:NetLock_Arany_=Class_Gold=_Főtanúsítvány.pem[0m
+[0;32m    amazon-ebs: Adding debian:GlobalSign_Root_CA_-_R3.pem[0m
+[0;32m    amazon-ebs: Adding debian:thawte_Primary_Root_CA_-_G3.pem[0m
+[0;32m    amazon-ebs: Adding debian:DigiCert_Global_Root_CA.pem[0m
+[0;32m    amazon-ebs: Adding debian:TWCA_Global_Root_CA.pem[0m
+[0;32m    amazon-ebs: Adding debian:Entrust_Root_Certification_Authority.pem[0m
+[0;32m    amazon-ebs: Adding debian:Hongkong_Post_Root_CA_1.pem[0m
+[0;32m    amazon-ebs: Adding debian:Certum_Root_CA.pem[0m
+[0;32m    amazon-ebs: Adding debian:Security_Communication_EV_RootCA1.pem[0m
+[0;32m    amazon-ebs: Adding debian:OISTE_WISeKey_Global_Root_GB_CA.pem[0m
+[0;32m    amazon-ebs: Adding debian:Buypass_Class_3_Root_CA.pem[0m
+[0;32m    amazon-ebs: Adding debian:VeriSign_Class_3_Public_Primary_Certification_Authority_-_G4.pem[0m
+[0;32m    amazon-ebs: Adding debian:DigiCert_Global_Root_G3.pem[0m
+[0;32m    amazon-ebs: Adding debian:Entrust_Root_Certification_Authority_-_G2.pem[0m
+[0;32m    amazon-ebs: Adding debian:AffirmTrust_Premium.pem[0m
+[0;32m    amazon-ebs: Adding debian:TURKTRUST_Certificate_Services_Provider_Root_2007.pem[0m
+[0;32m    amazon-ebs: Adding debian:Sonera_Class_1_Root_CA.pem[0m
+[0;32m    amazon-ebs: Adding debian:Swisscom_Root_EV_CA_2.pem[0m
+[0;32m    amazon-ebs: Adding debian:QuoVadis_Root_CA_1_G3.pem[0m
+[0;32m    amazon-ebs: Adding debian:Actalis_Authentication_Root_CA.pem[0m
+[0;32m    amazon-ebs: Adding debian:Visa_eCommerce_Root.pem[0m
+[0;32m    amazon-ebs: Adding debian:AC_Raíz_Certicámara_S.A..pem[0m
+[0;32m    amazon-ebs: Adding debian:Certplus_Class_2_Primary_CA.pem[0m
+[0;32m    amazon-ebs: Adding debian:Equifax_Secure_Global_eBusiness_CA.pem[0m
+[0;32m    amazon-ebs: Adding debian:Buypass_Class_2_Root_CA.pem[0m
+[0;32m    amazon-ebs: Adding debian:Izenpe.com.pem[0m
+[0;32m    amazon-ebs: Adding debian:XRamp_Global_CA_Root.pem[0m
+[0;32m    amazon-ebs: Adding debian:VeriSign_Universal_Root_Certification_Authority.pem[0m
+[0;32m    amazon-ebs: Adding debian:Global_Chambersign_Root_-_2008.pem[0m
+[0;32m    amazon-ebs: Adding debian:GeoTrust_Universal_CA_2.pem[0m
+[0;32m    amazon-ebs: Adding debian:CFCA_EV_ROOT.pem[0m
+[0;32m    amazon-ebs: Adding debian:Verisign_Class_1_Public_Primary_Certification_Authority_-_G3.pem[0m
+[0;32m    amazon-ebs: Adding debian:Security_Communication_RootCA2.pem[0m
+[0;32m    amazon-ebs: Adding debian:EC-ACC.pem[0m
+[0;32m    amazon-ebs: Adding debian:StartCom_Certification_Authority_2.pem[0m
+[0;32m    amazon-ebs: Adding debian:DST_Root_CA_X3.pem[0m
+[0;32m    amazon-ebs: Adding debian:StartCom_Certification_Authority_G2.pem[0m
+[0;32m    amazon-ebs: Adding debian:GeoTrust_Primary_Certification_Authority_-_G3.pem[0m
+[0;32m    amazon-ebs: Adding debian:DigiCert_Trusted_Root_G4.pem[0m
+[0;32m    amazon-ebs: Adding debian:thawte_Primary_Root_CA.pem[0m
+[0;32m    amazon-ebs: Adding debian:AffirmTrust_Commercial.pem[0m
+[0;32m    amazon-ebs: Adding debian:Camerfirma_Chambers_of_Commerce_Root.pem[0m
+[0;32m    amazon-ebs: Adding debian:Swisscom_Root_CA_1.pem[0m
+[0;32m    amazon-ebs: Adding debian:Go_Daddy_Class_2_CA.pem[0m
+[0;32m    amazon-ebs: Adding debian:Equifax_Secure_CA.pem[0m
+[0;32m    amazon-ebs: Adding debian:GlobalSign_ECC_Root_CA_-_R4.pem[0m
+[0;32m    amazon-ebs: Adding debian:WoSign_China.pem[0m
+[0;32m    amazon-ebs: Adding debian:COMODO_RSA_Certification_Authority.pem[0m
+[0;32m    amazon-ebs: Adding debian:AffirmTrust_Premium_ECC.pem[0m
+[0;32m    amazon-ebs: Adding debian:Swisscom_Root_CA_2.pem[0m
+[0;32m    amazon-ebs: Adding debian:Comodo_Secure_Services_root.pem[0m
+[0;32m    amazon-ebs: Adding debian:USERTrust_RSA_Certification_Authority.pem[0m
+[0;32m    amazon-ebs: Adding debian:Entrust.net_Premium_2048_Secure_Server_CA.pem[0m
+[0;32m    amazon-ebs: Adding debian:NetLock_Notary_=Class_A=_Root.pem[0m
+[0;32m    amazon-ebs: Adding debian:Verisign_Class_3_Public_Primary_Certification_Authority_-_G2.pem[0m
+[0;32m    amazon-ebs: Adding debian:Microsec_e-Szigno_Root_CA_2009.pem[0m
+[0;32m    amazon-ebs: Adding debian:QuoVadis_Root_CA_3.pem[0m
+[0;32m    amazon-ebs: Adding debian:GeoTrust_Global_CA.pem[0m
+[0;32m    amazon-ebs: Adding debian:COMODO_Certification_Authority.pem[0m
+[0;32m    amazon-ebs: Adding debian:Verisign_Class_2_Public_Primary_Certification_Authority_-_G3.pem[0m
+[0;32m    amazon-ebs: Adding debian:thawte_Primary_Root_CA_-_G2.pem[0m
+[0;32m    amazon-ebs: Adding debian:China_Internet_Network_Information_Center_EV_Certificates_Root.pem[0m
+[0;32m    amazon-ebs: Adding debian:Staat_der_Nederlanden_Root_CA_-_G2.pem[0m
+[0;32m    amazon-ebs: Adding debian:UTN_USERFirst_Hardware_Root_CA.pem[0m
+[0;32m    amazon-ebs: Adding debian:Camerfirma_Global_Chambersign_Root.pem[0m
+[0;32m    amazon-ebs: Adding debian:D-TRUST_Root_Class_3_CA_2_2009.pem[0m
+[0;32m    amazon-ebs: Adding debian:DigiCert_Global_Root_G2.pem[0m
+[0;32m    amazon-ebs: Adding debian:Comodo_AAA_Services_root.pem[0m
+[0;32m    amazon-ebs: Adding debian:Hellenic_Academic_and_Research_Institutions_RootCA_2011.pem[0m
+[0;32m    amazon-ebs: Adding debian:IdenTrust_Public_Sector_Root_CA_1.pem[0m
+[0;32m    amazon-ebs: Adding debian:Cybertrust_Global_Root.pem[0m
+[0;32m    amazon-ebs: Adding debian:CA_Disig.pem[0m
+[0;32m    amazon-ebs: Adding debian:PSCProcert.pem[0m
+[0;32m    amazon-ebs: Adding debian:Security_Communication_Root_CA.pem[0m
+[0;32m    amazon-ebs: Adding debian:WoSign.pem[0m
+[0;32m    amazon-ebs: Adding debian:TÜRKTRUST_Elektronik_Sertifika_Hizmet_Sağlayıcısı_H6.pem[0m
+[0;32m    amazon-ebs: Adding debian:QuoVadis_Root_CA.pem[0m
+[0;32m    amazon-ebs: Adding debian:Starfield_Services_Root_Certificate_Authority_-_G2.pem[0m
+[0;32m    amazon-ebs: Adding debian:Certum_Trusted_Network_CA.pem[0m
+[0;32m    amazon-ebs: Adding debian:Network_Solutions_Certificate_Authority.pem[0m
+[0;32m    amazon-ebs: Adding debian:GeoTrust_Global_CA_2.pem[0m
+[0;32m    amazon-ebs: Adding debian:Baltimore_CyberTrust_Root.pem[0m
+[0;32m    amazon-ebs: Adding debian:ApplicationCA_-_Japanese_Government.pem[0m
+[0;32m    amazon-ebs: Adding debian:Certinomis_-_Autorité_Racine.pem[0m
+[0;32m    amazon-ebs: Adding debian:SwissSign_Platinum_CA_-_G2.pem[0m
+[0;32m    amazon-ebs: Adding debian:OISTE_WISeKey_Global_Root_GA_CA.pem[0m
+[0;32m    amazon-ebs: Adding debian:S-TRUST_Universal_Root_CA.pem[0m
+[0;32m    amazon-ebs: Adding debian:GlobalSign_Root_CA.pem[0m
+[0;32m    amazon-ebs: Adding debian:DigiCert_Assured_ID_Root_CA.pem[0m
+[0;32m    amazon-ebs: Adding debian:Certigna.pem[0m
+[0;32m    amazon-ebs: Adding debian:SwissSign_Gold_CA_-_G2.pem[0m
+[0;32m    amazon-ebs: Adding debian:Secure_Global_CA.pem[0m
+[0;32m    amazon-ebs: Adding debian:Root_CA_Generalitat_Valenciana.pem[0m
+[0;32m    amazon-ebs: Adding debian:Autoridad_de_Certificacion_Firmaprofesional_CIF_A62634068.pem[0m
+[0;32m    amazon-ebs: Adding debian:S-TRUST_Authentication_and_Encryption_Root_CA_2005_PN.pem[0m
+[0;32m    amazon-ebs: Adding debian:DST_ACES_CA_X6.pem[0m
+[0;32m    amazon-ebs: Adding debian:Deutsche_Telekom_Root_CA_2.pem[0m
+[0;32m    amazon-ebs: Adding debian:IdenTrust_Commercial_Root_CA_1.pem[0m
+[0;32m    amazon-ebs: Adding debian:Starfield_Root_Certificate_Authority_-_G2.pem[0m
+[0;32m    amazon-ebs: Adding debian:D-TRUST_Root_Class_3_CA_2_EV_2009.pem[0m
+[0;32m    amazon-ebs: Adding debian:Buypass_Class_2_CA_1.pem[0m
+[0;32m    amazon-ebs: Adding debian:EE_Certification_Centre_Root_CA.pem[0m
+[0;32m    amazon-ebs: Adding debian:TeliaSonera_Root_CA_v1.pem[0m
+[0;32m    amazon-ebs: Adding debian:AddTrust_External_Root.pem[0m
+[0;32m    amazon-ebs: Adding debian:TC_TrustCenter_Class_3_CA_II.pem[0m
+[0;32m    amazon-ebs: Adding debian:ACCVRAIZ1.pem[0m
+[0;32m    amazon-ebs: Adding debian:GeoTrust_Primary_Certification_Authority_-_G2.pem[0m
+[0;32m    amazon-ebs: Adding debian:GlobalSign_Root_CA_-_R2.pem[0m
+[0;32m    amazon-ebs: Adding debian:Staat_der_Nederlanden_Root_CA_-_G3.pem[0m
+[0;32m    amazon-ebs: Adding debian:Entrust_Root_Certification_Authority_-_EC1.pem[0m
+[0;32m    amazon-ebs: Adding debian:Microsec_e-Szigno_Root_CA.pem[0m
+[0;32m    amazon-ebs: Adding debian:T-TeleSec_GlobalRoot_Class_3.pem[0m
+[0;32m    amazon-ebs: Adding debian:certSIGN_ROOT_CA.pem[0m
+[0;32m    amazon-ebs: Adding debian:Staat_der_Nederlanden_EV_Root_CA.pem[0m
+[0;32m    amazon-ebs: Adding debian:TÜBİTAK_UEKAE_Kök_Sertifika_Hizmet_Sağlayıcısı_-_Sürüm_3.pem[0m
+[0;32m    amazon-ebs: Adding debian:USERTrust_ECC_Certification_Authority.pem[0m
+[0;32m    amazon-ebs: Adding debian:NetLock_Express_=Class_C=_Root.pem[0m
+[0;32m    amazon-ebs: Adding debian:CA_Disig_Root_R1.pem[0m
+[0;32m    amazon-ebs: Adding debian:DigiCert_High_Assurance_EV_Root_CA.pem[0m
+[0;32m    amazon-ebs: Adding debian:Taiwan_GRCA.pem[0m
+[0;32m    amazon-ebs: Adding debian:AffirmTrust_Networking.pem[0m
+[0;32m    amazon-ebs: Adding debian:ComSign_CA.pem[0m
+[0;32m    amazon-ebs: Adding debian:Certinomis_-_Root_CA.pem[0m
+[0;32m    amazon-ebs: Adding debian:IGC_A.pem[0m
+[0;32m    amazon-ebs: Adding debian:AddTrust_Qualified_Certificates_Root.pem[0m
+[0;32m    amazon-ebs: Adding debian:QuoVadis_Root_CA_2_G3.pem[0m
+[0;32m    amazon-ebs: Adding debian:NetLock_Qualified_=Class_QA=_Root.pem[0m
+[0;32m    amazon-ebs: done.[0m
+[0;32m    amazon-ebs: Setting up default-jre-headless (2:1.8-56ubuntu2) ...[0m
+[0;32m    amazon-ebs: Setting up openjdk-8-jre:amd64 (8u121-b13-0ubuntu1.16.04.2) ...[0m
+[0;32m    amazon-ebs: update-alternatives: using /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/policytool to provide /usr/bin/policytool (policytool) in auto mode[0m
+[0;32m    amazon-ebs: Setting up default-jre (2:1.8-56ubuntu2) ...[0m
+[0;32m    amazon-ebs: Setting up gconf-service-backend (3.2.6-3ubuntu6) ...[0m
+[0;32m    amazon-ebs: Setting up gconf2 (3.2.6-3ubuntu6) ...[0m
+[0;32m    amazon-ebs: Setting up libgnomevfs2-common (1:2.24.4-6.1ubuntu1) ...[0m
+[0;32m    amazon-ebs: Setting up libgnomevfs2-0:amd64 (1:2.24.4-6.1ubuntu1) ...[0m
+[0;32m    amazon-ebs: Setting up libgnome2-common (2.32.1-5ubuntu1) ...[0m
+[0;32m    amazon-ebs: Setting up libgnome-2-0:amd64 (2.32.1-5ubuntu1) ...[0m
+[0;32m    amazon-ebs: Processing triggers for libc-bin (2.23-0ubuntu5) ...[0m
+[0;32m    amazon-ebs: Processing triggers for systemd (229-4ubuntu13) ...[0m
+[0;32m    amazon-ebs: Processing triggers for ureadahead (0.100.0-19) ...[0m
+[0;32m    amazon-ebs: Processing triggers for ca-certificates (20160104ubuntu1) ...[0m
+[0;32m    amazon-ebs: Updating certificates in /etc/ssl/certs...[0m
+[0;32m    amazon-ebs: 0 added, 0 removed; done.[0m
+[0;32m    amazon-ebs: Running hooks in /etc/ca-certificates/update.d...[0m
+[0;32m    amazon-ebs:[0m
+[0;32m    amazon-ebs: done.[0m
+[0;32m    amazon-ebs: done.[0m
+[1;32m==> amazon-ebs: Stopping the source instance...[0m
+[1;32m==> amazon-ebs: Waiting for the instance to stop...[0m
+[1;32m==> amazon-ebs: Creating the AMI: packer-example 1487904132[0m
+[0;32m    amazon-ebs: AMI: ami-2eab8e4b[0m
+[1;32m==> amazon-ebs: Waiting for AMI to become ready...[0m
+[1;32m==> amazon-ebs: Terminating the source AWS instance...[0m
+[1;32m==> amazon-ebs: Cleaning up any extra volumes...[0m
+[1;32m==> amazon-ebs: No volumes to clean up, skipping[0m
+[1;32m==> amazon-ebs: Deleting temporary security group...[0m
+[1;32m==> amazon-ebs: Deleting temporary keypair...[0m
+[1;32mBuild 'amazon-ebs' finished.[0m
+
+==> Builds finished. The artifacts of successful builds are:
+--> amazon-ebs: AMIs were created:
+
+us-east-2: ami-2eab8e4b
