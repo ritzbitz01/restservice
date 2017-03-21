@@ -4,7 +4,7 @@ aws ec2 authorize-security-group-ingress --group-name gocd-sg --protocol tcp --p
 aws ec2 create-key-pair --key-name gocd-key --query 'KeyMaterial' --output text > gocd-key.pem
 
 #Launch and connect to the instance, need security group id from previous step. This command will return an instance id.
-aws ec2 run-instances --image-id ami-9da98cf8 --security-group-ids sg-e31d8c8a --count 1 --instance-type t2.micro --key-name gocd-key --query 'Instances[0].InstanceId'
+aws ec2 run-instances --image-id ami-6e2c080b --security-group-ids sg-e31d8c8a --count 1 --instance-type t2.micro --key-name gocd-key --query 'Instances[0].InstanceId'
 
 #Retrieve the ip address of the created instance. Will need the instance id from the previous step. This command will return the IP Address of the instance.
 aws ec2 describe-instances --instance-ids i-ec3e1e2k --query 'Reservations[0].Instances[0].PublicIpAddress'

@@ -4,7 +4,7 @@
 
   <groupId>com.rbp.simplespring</groupId>
   <artifactId>restservice</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.2-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>restservice</name>
@@ -275,7 +275,22 @@
             <url>https://repository.jboss.org/nexus/content/repositories/releases</url>
         </repository>
     </repositories>
-
+	<distributionManagement>
+		<site>
+			<id>Pearson-Nexus-Site</id>
+			<url>https://devops-tools.pearson.com/nexus-deps/content/sites/site</url>
+		</site>
+		<repository>
+			<id>Pearson-Nexus-Releases</id>
+			<name>Pearson-Nexus-Releases</name>
+			<url>https://devops-tools.pearson.com/nexus-master/content/repositories/releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>Pearson-Nexus-Snapshots</id>
+			<name>Pearson-Nexus-Snapshots</name>
+			<url>https://devops-tools.pearson.com/nexus-deps/content/repositories/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
     <pluginRepositories>
         <pluginRepository>
             <id>spring-releases</id>
