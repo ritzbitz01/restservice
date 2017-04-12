@@ -1,0 +1,13 @@
+[Unit]
+Description=restservice
+After=syslog.target
+
+[Service]
+User=ubuntu
+ExecStart=/usr/bin/java -jar restservice.jar
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/usr/local/share/java
+
+[Install]
+WantedBy=multi-user.target

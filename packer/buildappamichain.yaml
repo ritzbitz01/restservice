@@ -1,0 +1,16 @@
+---
+  chain:
+    -
+      name: "get_base_ami"
+      ref: "aws.get_base_ami_action"
+      params:
+        os: "{{os_name}}"
+      on-success: "packer_build"
+    -
+      name: "packer_build"
+      ref: "packer.build"
+      params:
+        packerfile: "{{packerfile}}"
+        variables: "{"base_ami_id":"{{ get_base_ami.stdout }}", "ami_app_name":"{{ami_app_name}}","app_pkg_name":"{{app_package_name_loc}}","pkg_install_loc":"{{ package_install_loc }}", "ec2_instance_type":"{{ec2_instance_type}}"}"
+
+  default: "get_base_ami"

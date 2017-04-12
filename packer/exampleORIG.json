@@ -1,0 +1,37 @@
+{
+  "variables": {
+    "aws_access_key": "",
+    "aws_secret_key": ""
+  },
+  "builders": [{
+    "type": "amazon-ebs",
+    "access_key": "{{user `aws_access_key`}}",
+    "secret_key": "{{user `aws_secret_key`}}",
+    "region": "us-east-2",
+    "source_ami": "ami-cc7551a9",
+    "instance_type": "t2.micro",
+    "ssh_username": "ubuntu",
+    "ami_name": "gocd-example {{timestamp}}"
+  }],
+  "provisioners": [{
+    "type": "shell",
+    "inline": [
+      "sleep 30",
+      "sudo apt-get update",
+      "sudo apt-get install -y default-jre"
+    ]
+  },
+  {
+    "type": "shell",
+    "inline": [
+      "sleep 30",
+      "sudo apt-get update",
+      "sudo apt-get install -y redis-server"
+    ]
+  },
+  {
+    "type": "file",
+    "source": "restservice_0.0.5~SNAPSHOT_all.deb",
+    "destination": "/home/ubuntu/restservice_0.0.5~SNAPSHOT_all.deb"
+  }]
+}
