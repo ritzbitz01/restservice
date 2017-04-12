@@ -1,2 +1,2 @@
 #!/bin/sh
-start restservice
+systemctl start restservice.service

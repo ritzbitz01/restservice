@@ -175,11 +175,11 @@
 								<data>
 									<src>${project.build.directory}/${project.artifactId}-${project.version}.jar</src>
 									<type>file</type>
-									<dst>/home/appuser/${project.artifactId}/${project.artifactId}.jar</dst>
+									<dst>/usr/local/share/java/${project.artifactId}.jar</dst>
 									<mapper>
 										<type>perm</type>
-										<user>appuser</user>
-										<group>appuser</group>
+										<user>ubuntu</user>
+										<group>ubuntu</group>
 									</mapper>
 								</data>
 								<data>
@@ -189,8 +189,8 @@
 									</paths>
 									<mapper>
 										<type>perm</type>
-										<user>appuser</user>
-										<group>appuser</group>
+										<user>ubuntu</user>
+										<group>ubuntu</group>
 									</mapper>
 								</data>
 								<!-- <data> <src>${project.build.directory}/${project.artifactId}-${project.version}-tests.jar</src> 
@@ -251,8 +251,8 @@
 									</mapper>
 								</data> -->
 								<data>
-									<src>${project.basedir}/src/deb/init/restservice.conf</src>
-									<dst>/etc/init/${project.artifactId}.conf</dst>
+									<src>${project.basedir}/src/deb/init/restservice.service</src>
+									<dst>/lib/systemd/system/${project.artifactId}.service</dst>
 									<type>file</type>
 								</data>
 							</dataSet>
