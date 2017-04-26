@@ -21,19 +21,19 @@ public class MessageService {
 	public Long saveMessageData(MessageData data) {
 		Long messageId = database.saveMessageData(data);
 
-		if (data.getMessageSender().equals("CodeCoverage")) {
-			String cc = "This is for code coverage";
-			int i = 1;
-			if (true) {
-				String cd = "Blah";
-			}
-		}
-
 		return messageId;
 	}
 
 	public MessageData getMessageData(Long messageId) {
 		return database.getMessageData(messageId);
+	}
+
+	public void deleteMessageData(Long messageId) {
+		database.deleteMessageData(messageId);
+	}
+
+	public void updateMessageData(MessageData data) {
+		database.updateMessageData(data);
 	}
 
 }

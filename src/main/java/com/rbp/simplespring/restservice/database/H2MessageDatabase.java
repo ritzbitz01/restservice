@@ -23,7 +23,10 @@ public class H2MessageDatabase implements MessageDatabase {
 	@Override
 	public MessageData getMessageData(Long id) {
 		MessageEntity entity = messageRepo.findOne(id);
-		MessageData data = new MessageData(entity.getMessageOwner(), entity.getMessageData());
+		MessageData data = null;
+		if (entity != null) {
+			data = new MessageData(entity.getMessageOwner(), entity.getMessageData());
+		}
 		return data;
 	}
 
